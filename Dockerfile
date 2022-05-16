@@ -9,12 +9,9 @@ LABEL maintainer="thespad"
 
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
-    gcc \
-    build-base \
-    python3-dev && \
+    jq && \
   apk add -U --no-cache \
     curl \
-    jq \
     python3 \
     uwsgi \
     uwsgi-python && \
@@ -40,7 +37,8 @@ RUN \
     wheel && \
   pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.15/" -r requirements.txt && \
   apk del --purge build-dependencies && \
-  rm /tmp/twitfix.tar.gz
+  rm -rf \
+    /tmp/*
 
 COPY root/ /
 
