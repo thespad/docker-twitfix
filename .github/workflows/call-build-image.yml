@@ -1,0 +1,19 @@
+name: Build Image On Release
+
+on:
+  release:
+    types: [ published ]
+  pull_request:
+
+jobs:
+  call-workflow:
+    uses: thespad/actions/.github/workflows/build-image.yml@v6
+    with:
+      repo_owner: "thespad"
+      app_name: "twitfix"
+      release_type: "github_commit"
+      release_url: "https://api.github.com/repos/thespad/TwitFix/commits/main"
+      dockerhub_user: "thespad"
+      target-arch: "all"      
+    secrets:
+      dockerhub_password: ${{ secrets.DOCKER_PASSWORD }}

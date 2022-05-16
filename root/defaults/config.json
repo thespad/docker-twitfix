@@ -1,0 +1,18 @@
+{
+  "api": {
+      "access_secret": "ACCESS_SECRET",
+      "access_token": "ACCESS_TOKEN",
+      "api_key": "API_KEY",
+      "api_secret": "API_SECRET"
+  },
+  "config": {
+      "appname": "APPNAME",
+      "color": "COLOR",
+      "database": "DATABASE",
+      "link_cache": "LINK_CACHE",
+      "method": "METHOD",
+      "repo": "https://github.com/thespad/TwitFix/",
+      "table": "TwiFix",
+      "url": "URL"
+  }
+}

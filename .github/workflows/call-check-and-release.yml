@@ -1,0 +1,17 @@
+name: Check for update and release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 12 * * *'
+
+jobs:
+  call-workflow:
+    uses: thespad/actions/.github/workflows/check-and-release.yml@v6
+    with:
+      repo_owner: "thespad"
+      app_name: "twitfix"
+      release_type: "github_commit"
+      release_url: "https://api.github.com/repos/thespad/TwitFix/commits/main"
+    secrets:
+      repo_scoped_token: ${{ secrets.repo_scoped_token }}
