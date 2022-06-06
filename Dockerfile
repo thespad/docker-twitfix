@@ -18,12 +18,12 @@ RUN \
   echo "**** install twitfix ****" && \
   mkdir -p /app/twitfix && \
   if [ -z ${APP_VERSION+x} ]; then \
-    APP_VERSION=$(curl -sL "https://api.github.com/repos/thespad/TwitFix/commits/main" \
+    APP_VERSION=$(curl -sL "https://api.github.com/repos/dylanpdx/BetterTwitFix/commits/main" \
     | jq -r 'first(.[])' | cut -c1-8); \
   fi && \
   curl -s -o \
     /tmp/twitfix.tar.gz -L \
-    "https://github.com/thespad/TwitFix/archive/${APP_VERSION}.tar.gz" && \
+    "https://github.com/dylanpdx/BetterTwitFix/archive/${APP_VERSION}.tar.gz" && \
   tar xf \
     /tmp/twitfix.tar.gz -C \
     /app/twitfix/ --strip-components=1 && \

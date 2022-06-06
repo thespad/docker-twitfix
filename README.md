@@ -139,4 +139,5 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 
 ## Versions
 
+* **06.06.22:** - Switch to dylanpdx/BetterTwitFix for upstream
 * **16.05.22:** - Initial Release.
