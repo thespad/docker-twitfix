@@ -20,7 +20,7 @@ if [ ! -f "/config/twitfix.ini" ]; then
     cp /defaults/twitfix.ini /config/twitfix.ini
 fi
 
-if [ ! -f "/app/twitfix/twitfix.ini" ]; then
+if [ -f "/app/twitfix/twitfix.ini" ]; then
     rm /app/twitfix/twitfix.ini 2>/dev/null
     ln -s /config/twitfix.ini /app/twitfix/twitfix.ini
 fi

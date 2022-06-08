@@ -32,9 +32,11 @@ RUN \
   rm -rf /usr/lib/python*/ensurepip && \
   cd /app/twitfix && \
   pip3 install --upgrade \
+    pillow \
     pip \
     requests \
-    wheel && \
+    wheel \
+    yt-dlp && \
   pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.15/" -r requirements.txt && \
   apk del --purge build-dependencies && \
   rm -rf \
