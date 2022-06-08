@@ -10,6 +10,7 @@ LABEL maintainer="thespad"
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
     build-base \
+    python3-dev \
     gcc \
     jq && \
   apk add -U --no-cache \
