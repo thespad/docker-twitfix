@@ -13,6 +13,7 @@ RUN \
   apk add -U --no-cache \
     curl \
     python3 \
+    py3-pillow \
     uwsgi \
     uwsgi-python && \
   echo "**** install twitfix ****" && \
@@ -32,7 +33,6 @@ RUN \
   rm -rf /usr/lib/python*/ensurepip && \
   cd /app/twitfix && \
   pip3 install --upgrade \
-    pillow \
     pip \
     requests \
     wheel \
