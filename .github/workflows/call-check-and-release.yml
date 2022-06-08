@@ -12,6 +12,6 @@ jobs:
       repo_owner: "thespad"
       app_name: "twitfix"
       release_type: "github_commit"
-      release_url: "https://api.github.com/repos/thespad/TwitFix/commits/main"
+      release_url: "https://api.github.com/repos/dylanpdx/BetterTwitFix/commits/main"
     secrets:
       repo_scoped_token: ${{ secrets.repo_scoped_token }}
