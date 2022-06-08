@@ -9,6 +9,8 @@ LABEL maintainer="thespad"
 
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
+    build-base \
+    gcc \
     jq && \
   apk add -U --no-cache \
     curl \
@@ -32,10 +34,11 @@ RUN \
   python3 -m ensurepip && \
   rm -rf /usr/lib/python*/ensurepip && \
   cd /app/twitfix && \
-  pip3 install --upgrade \
+  pip3 install --no-cache-dir --upgrade \
     pip \
     requests \
-    wheel \
+    wheel && \
+  pip3 install --no-cache-dir --upgrade \    
     yt-dlp && \
   pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.15/" -r requirements.txt && \
   apk del --purge build-dependencies && \
