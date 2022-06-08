@@ -20,10 +20,6 @@ if [ ! -f "/config/twitfix.ini" ]; then
     cp /defaults/twitfix.ini /config/twitfix.ini
 fi
 
-if [ ! -f "/app/twitfix/twitfix.ini" ]; then
-    ln -s /config/twitfix.ini /app/twitfix/twitfix.ini
-fi
-
 TWIT_CONF=(
 ACCESS_SECRET
 ACCESS_TOKEN
