@@ -11,7 +11,7 @@
 [![ci](https://img.shields.io/github/workflow/status/thespad/docker-twitfix/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-baseimage-update.yml)
 [![ci](https://img.shields.io/github/workflow/status/thespad/docker-twitfix/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-twitfix/actions/workflows/call-build-image.yml)
 
-[twitfix](https://github.com/thespad/twitfix/) Basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information.
+[twitfix](https://github.com/dylanpdx/BetterTwitFix/) Basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information.
 
 ## Supported Architectures
 
@@ -31,7 +31,7 @@ The architectures supported by this image are:
 
 Webui is accessible at `http://SERVERIP:PORT`
 
-More info at [twitfix](https://github.com/thespad/twitfix/).
+More info at [twitfix](https://github.com/dylanpdx/BetterTwitFix/).
 
 ## Usage
 
