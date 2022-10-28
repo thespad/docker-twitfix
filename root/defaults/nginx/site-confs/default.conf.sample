@@ -6,6 +6,8 @@ server {
     listen [::]:80 default_server;
     server_name _;
 
+    include /config/nginx/real-ip.conf;
+
     client_max_body_size 0;
 
     location / {

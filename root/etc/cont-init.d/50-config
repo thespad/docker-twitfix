@@ -1,11 +1,7 @@
 #!/usr/bin/with-contenv bash
 
-if ! grep -q 'Version 2022/05/16' /config/nginx/site-confs/default.conf; then
-    cp /defaults/default.conf /config/nginx/site-confs/default.conf
-fi
-
-if [ ! -f "/config/nginx/http-confs/real-ip.conf" ]; then
-    cp /defaults/real-ip.conf /config/nginx/http-confs/real-ip.conf
+if [ ! -f "/config/nginx/real-ip.conf" ]; then
+    cp /defaults/real-ip.conf /config/nginx/real-ip.conf
 fi
 
 if [ ! -f "/config/config.json" ]; then
