@@ -16,6 +16,7 @@ RUN \
   apk add -U --no-cache \
     curl \
     python3 \
+    py3-pillow \
     uwsgi \
     uwsgi-python && \
   echo "**** install twitfix ****" && \
