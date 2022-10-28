@@ -40,10 +40,6 @@ RUN \
     requests \
     wheel && \
   pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.15/" -r requirements.txt && \
-  pip3 install --no-cache-dir --upgrade \    
-    yt-dlp \
-    # Force install of Werkzeug 2.1.1 to fix CVE-2022-29361
-    Werkzeug==2.1.1 && \
   apk del --purge build-dependencies && \
   rm -rf \
     /tmp/*
