@@ -14,8 +14,9 @@ ENV S6_STAGE2_HOOK="/init-hook"
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
     build-base \
+    gcc \
     python3-dev \
-    gcc && \
+    zlib-dev \
   apk add -U --no-cache \
     python3 \
     py3-pillow \
