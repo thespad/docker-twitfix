@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-cd /app/twitfix || exit 1
-
-exec \
-    s6-setuidgid abc /usr/sbin/uwsgi /config/twitfix.ini

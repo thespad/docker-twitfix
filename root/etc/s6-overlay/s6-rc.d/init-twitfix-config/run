@@ -1,18 +1,18 @@
 #!/usr/bin/with-contenv bash
 
-if [ ! -f "/config/nginx/real-ip.conf" ]; then
+if [[ ! -f "/config/nginx/real-ip.conf" ]]; then
     cp /defaults/real-ip.conf /config/nginx/real-ip.conf
 fi
 
-if [ ! -f "/config/config.json" ]; then
+if [[ ! -f "/config/config.json" ]]; then
     cp /defaults/config.json /config/config.json
 fi
 
-if [ ! -f "/app/twitfix/config.json" ]; then
+if [[ ! -f "/app/twitfix/config.json" ]]; then
     ln -s /config/config.json /app/twitfix/config.json
 fi
 
-if [ ! -f "/config/twitfix.ini" ]; then
+if [[ ! -f "/config/twitfix.ini" ]]; then
     cp /defaults/twitfix.ini /config/twitfix.ini
 fi
 
