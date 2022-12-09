@@ -15,6 +15,7 @@ RUN \
   apk add -U --no-cache --virtual=build-dependencies \
     build-base \
     gcc \
+    libjpeg-dev \
     python3-dev \
     zlib-dev && \
   apk add -U --no-cache \
