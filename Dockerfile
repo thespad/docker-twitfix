@@ -16,7 +16,7 @@ RUN \
     build-base \
     gcc \
     python3-dev \
-    zlib-dev \
+    zlib-dev && \
   apk add -U --no-cache \
     python3 \
     py3-pillow \
