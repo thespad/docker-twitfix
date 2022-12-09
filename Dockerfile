@@ -1,4 +1,6 @@
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.15
+# syntax=docker/dockerfile:1
+
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.17
 
 # set version label
 ARG BUILD_DATE
@@ -7,14 +9,16 @@ ARG APP_VERSION
 LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thespad"
 
+ENV S6_STAGE2_HOOK="/init-hook"
+
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
     build-base \
-    python3-dev \
     gcc \
-    jq && \
+    libjpeg-turbo-dev \
+    python3-dev \
+    zlib-dev && \
   apk add -U --no-cache \
-    curl \
     python3 \
     py3-pillow \
     uwsgi \
@@ -35,11 +39,11 @@ RUN \
   python3 -m ensurepip && \
   rm -rf /usr/lib/python*/ensurepip && \
   cd /app/twitfix && \
-  pip3 install --no-cache-dir --upgrade \
+  pip3 install -U --no-cache-dir \
     pip \
     requests \
     wheel && \
-  pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.15/" -r requirements.txt && \
+  pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.17/" -r requirements.txt && \
   apk del --purge build-dependencies && \
   rm -rf \
     /tmp/*
