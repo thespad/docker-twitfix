@@ -7,9 +7,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/thespad/docker-twitfix.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-twitfix)
 [![Docker Stars](https://img.shields.io/docker/stars/thespad/twitfix.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/thespad/twitfix)
 
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-twitfix/Check%20for%20update%20and%20release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-check-and-release.yml)
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-twitfix/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-baseimage-update.yml)
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-twitfix/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-twitfix/actions/workflows/call-build-image.yml)
+[![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-check-and-release.yml?branch=main&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-check-and-release.yml)
+[![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-baseimage-update.yml?branch=main&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-baseimage-update.yml)
+[![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-build-image.yml?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-twitfix/actions/workflows/call-build-image.yml)
 
 [twitfix](https://github.com/dylanpdx/BetterTwitFix/) Basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information.
 
