@@ -8,6 +8,9 @@ ARG VERSION
 ARG APP_VERSION
 LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thespad"
+LABEL org.opencontainers.image.source="https://github.com/thespad/docker-twitfix"
+LABEL org.opencontainers.image.url="https://github.com/thespad/docker-twitfix"
+LABEL org.opencontainers.image.description="A basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information"
 
 ENV S6_STAGE2_HOOK="/init-hook"
 
