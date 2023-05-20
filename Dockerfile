@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.17
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.18
 
 # set version label
 ARG BUILD_DATE
@@ -12,7 +12,10 @@ LABEL org.opencontainers.image.source="https://github.com/thespad/docker-twitfix
 LABEL org.opencontainers.image.url="https://github.com/thespad/docker-twitfix"
 LABEL org.opencontainers.image.description="A basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information"
 
-ENV S6_STAGE2_HOOK="/init-hook"
+ENV S6_STAGE2_HOOK="/init-hook" \
+  PYTHONIOENCODING=utf-8 \
+  VIRTUAL_ENV=/pyenv \
+  PATH="/pyenv/bin:$PATH"
 
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
@@ -23,7 +26,6 @@ RUN \
     zlib-dev && \
   apk add -U --no-cache \
     python3 \
-    py3-pillow \
     uwsgi \
     uwsgi-python && \
   echo "**** install twitfix ****" && \
@@ -39,14 +41,14 @@ RUN \
     /tmp/twitfix.tar.gz -C \
     /app/twitfix/ --strip-components=1 && \
   echo "**** install pip packages ****" && \
-  python3 -m ensurepip && \
-  rm -rf /usr/lib/python*/ensurepip && \
+  mkdir -p /pyenv && \
+  python3 -m venv /pyenv && \
   cd /app/twitfix && \
-  pip3 install -U --no-cache-dir \
+  pip install -U --no-cache-dir \
     pip \
     requests \
     wheel && \
-  pip3 install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.17/" -r requirements.txt && \
+  pip install --no-cache-dir --find-links "https://wheel-index.linuxserver.io/alpine-3.18/" -r requirements.txt && \
   apk del --purge build-dependencies && \
   rm -rf \
     /tmp/*
