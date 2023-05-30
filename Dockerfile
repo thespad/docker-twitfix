@@ -20,14 +20,13 @@ ENV S6_STAGE2_HOOK="/init-hook" \
 RUN \
   apk add -U --no-cache --virtual=build-dependencies \
     build-base \
-    gcc \
     libjpeg-turbo-dev \
     python3-dev \
     zlib-dev && \
   apk add -U --no-cache \
     python3 \
     uwsgi \
-    uwsgi-python && \
+    uwsgi-python3 && \
   echo "**** install twitfix ****" && \
   mkdir -p /app/twitfix && \
   if [ -z ${APP_VERSION+x} ]; then \

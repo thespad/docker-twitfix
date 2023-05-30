@@ -12,9 +12,7 @@ if [[ ! -f "/app/twitfix/config.json" ]]; then
     ln -s /config/config.json /app/twitfix/config.json
 fi
 
-if [[ ! -f "/config/twitfix.ini" ]]; then
-    cp /defaults/twitfix.ini /config/twitfix.ini
-fi
+cp /defaults/twitfix.ini /config/twitfix.ini
 
 TWIT_CONF=(
 ACCESS_SECRET
