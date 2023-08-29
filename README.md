@@ -1,4 +1,9 @@
+
 # [thespad/twitfix](https://github.com/thespad/docker-twitfix)
+
+## DEPRECATION NOTICE
+
+This image is deprecated. We will not offer support for this image and it will not be updated. We recommend not using Twitter any more.
 
 [![GitHub Release](https://img.shields.io/github/release/thespad/docker-twitfix.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-twitfix/releases)
 ![Commits](https://img.shields.io/github/commits-since/thespad/docker-twitfix/latest?color=26689A&include_prereleases&logo=github&style=for-the-badge)
@@ -10,10 +15,6 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-check-and-release.yml?branch=main&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-check-and-release.yml)
 [![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-baseimage-update.yml?branch=main&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-baseimage-update.yml)
 [![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-build-image.yml?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-twitfix/actions/workflows/call-build-image.yml)
-
-## DEPRECATION NOTICE
-
-This image is deprecated. We will not offer support for this image and it will not be updated. We recommend not using Twitter any more.
 
 [twitfix](https://github.com/dylanpdx/BetterTwitFix/) Basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information.
 
