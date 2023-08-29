@@ -11,6 +11,10 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-baseimage-update.yml?branch=main&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-twitfix/actions/workflows/call-baseimage-update.yml)
 [![ci](https://img.shields.io/github/actions/workflow/status/thespad/docker-twitfix/call-build-image.yml?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-twitfix/actions/workflows/call-build-image.yml)
 
+## DEPRECATION NOTICE
+
+This image is deprecated. We will not offer support for this image and it will not be updated. We recommend not using Twitter any more.
+
 [twitfix](https://github.com/dylanpdx/BetterTwitFix/) Basic flask server that serves fixed twitter video embeds to desktop discord by using either the Twitter API or Youtube-DL to grab tweet video information.
 
 ## Supported Architectures
@@ -139,6 +143,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 
 ## Versions
 
+* **29.08.23:** - Deprecate.
 * **14.05.23:** - Rebase to Alpine 3.18. Drop support for armhf.
 * **09.12.22:** - Rebase to Alpine 3.17.
 * **06.06.22:** - Switch to dylanpdx/BetterTwitFix for upstream
